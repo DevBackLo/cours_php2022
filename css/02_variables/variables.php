@@ -110,7 +110,7 @@
                                     <td>contient le nom et la valeur de toutes les variables globales du script.
                                         Les noms des variables sont les clefs de ce tableau. <code>$GLOBALS["mavar"]</code> récupère la valeur de la variable $mavar en dehors de sa zone de visibilitée (dans les fonctions par exemple)</td>
                                 </tr>
-                                
+
                                 <tr>
                                     <th scope="row">$COOKIE</th>
                                     <td>contient le nom et la valeur des cookies enregistrer sur le poste client.
@@ -147,16 +147,17 @@
 
                                 <tr>
                                     <th scope="row">$_SERVER</th>
-                                    <td>Contient les informations liées au serveur web, tel que le contenu des en-têtes HTTP ou le nom du script en cour d'execution. retenons les tables suivantes: 
-                                    <ul>
-                                        <li><code>$_SERVER{"HTTP_ACCESS_LANGAGE"]</code>, qui contient le code de langue du navigateur client</li>
-                                        <li><code>$_SERVER{"HTTP_COOKIE"]</code>, qui contient le nom et la valeur des cookies lue sur le poste client</li>
-                                        <li><code>$_SERVER{"HTTP_HOST"]</code>, qui donne le nom de domaine</li>
-                                        <li><code>$_SERVER{"PHP_SELF"]</code>, qui contient le nom du script en cour. Nous l'utilisiserons souvent dans les formulaires</li>
-                                        <li><code>$_SERVER{"SERVER_ADDR"]</code>, qui indique l'adresse IP du serveur.</li>
-                                        <li><code>$_SERVER{"QUERY_STRING"]</code>, qui contient la chaîne de requête utilisée pour accéder au script</li>
-                                        
-                                    </ul> </td>
+                                    <td>Contient les informations liées au serveur web, tel que le contenu des en-têtes HTTP ou le nom du script en cour d'execution. retenons les tables suivantes:
+                                        <ul>
+                                            <li><code>$_SERVER{"HTTP_ACCESS_LANGAGE"]</code>, qui contient le code de langue du navigateur client</li>
+                                            <li><code>$_SERVER{"HTTP_COOKIE"]</code>, qui contient le nom et la valeur des cookies lue sur le poste client</li>
+                                            <li><code>$_SERVER{"HTTP_HOST"]</code>, qui donne le nom de domaine</li>
+                                            <li><code>$_SERVER{"PHP_SELF"]</code>, qui contient le nom du script en cour. Nous l'utilisiserons souvent dans les formulaires</li>
+                                            <li><code>$_SERVER{"SERVER_ADDR"]</code>, qui indique l'adresse IP du serveur.</li>
+                                            <li><code>$_SERVER{"QUERY_STRING"]</code>, qui contient la chaîne de requête utilisée pour accéder au script</li>
+
+                                        </ul>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -168,8 +169,89 @@
 
                         </table>
                     </div>
+                    <!--Fin de la colonne-->
                 </div>
 
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-12 px-4">
+                        <h2="text-center"><u>4-Les opérateurs d'affectation combinés</u></h2>
+                            <p>En plus de l'opérateur classique d'affectation = ,il existe plusieurs operateurs d'affectations combiner. ces opérateur realise à la fois une opération entre deux opérandes et l'affectation du resultat à l'opérande de gauche</p>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Opérateur</th>
+                                        <th scope="col">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">+=</th>
+                                        <th>Addition puis affectation :<br>
+                                            $x += $y équivaut à $x = $x + $y <br>
+                                            $y peut être une expression complexe dont la valeur est un nombre.</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">-=</th>
+                                        <th>Soustraction puis affectation :<br>
+                                            $x -= $y équivaut à $x = $x - $y <br>
+                                            $y peut être une expression complexe dont la valeur est un nombre.</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">*=</th>
+                                        <th>Multiplication puis affectation :<br>
+                                            $x *= $y équivaut à $x = $x * $y <br>
+                                            $y peut être une expression complexe dont la valeur est un nombre.</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">**=</th>
+                                        <th>Puissance puis affectation :<br>
+                                            $x**=2 équivaut à $x=($x²).</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">*=</th>
+                                        <th>Division puis affectation :<br>
+                                            $x /= $y équivaut à $x = $x * $y <br>
+                                            $y peut être une expression complexe dont la valeur est un nombre différent de zero.</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">%=</th>
+                                        <th>Modulo puis affectation :<br>
+                                            $x %= $y équivaut à $x = $x % $y $y <br>
+                                            $y peut être une expression complexe dont la valeur est un nombre.</th>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">.=</th>
+                                        <th>Concaténation puis affectation :<br>
+                                            $x .= $y équivaut à $x = $x . $y <br>
+                                            $y peut être une expression littérale dont la valeur est une chaîne de caractère.</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                    </div><!-- Fin de la colonne-->
+
+
+                </div><!-- fin de la rangée row-->
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-12 px-4">
+                        <h2 class="text-center"><u>5-Les constantes</u></h2>
+                        <p>Vous serez parfois amenés a utiliser de manière répetitive des informations devant rester consantes dans toutes les page d'un même site. Il peut s'agir de texte où de nombres qui reviennent souvent. Pour ne pas risquer l'écrasement accidentel de ces valeurs , qui pourraient produire si elles étaient contenues dans des variables, vous avez tout interêt à les enregistrer sous forme de constantes personnalisées.</p>
+                        <p>On peut définir ses constantes sois-même cf. ; pour définir des constantes personnalisées, utilisez la fonction define(), dont la syntaxe est la suivante :
+                            <strong>boolean define(string nom_cte,divers valeur_cte boolean casse)</strong>
+                            voir la page <a href="../00_page/03-page.php" target="blank">suivante</a>
+                        </p>
+                    </div><!--Fin de la colonne-->
+                </div>
             </main>
         </div>
         <!-- Fin de la partie principale, col-8 -->
