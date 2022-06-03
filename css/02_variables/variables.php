@@ -248,9 +248,62 @@
                         <p>Vous serez parfois amenés a utiliser de manière répetitive des informations devant rester consantes dans toutes les page d'un même site. Il peut s'agir de texte où de nombres qui reviennent souvent. Pour ne pas risquer l'écrasement accidentel de ces valeurs , qui pourraient produire si elles étaient contenues dans des variables, vous avez tout interêt à les enregistrer sous forme de constantes personnalisées.</p>
                         <p>On peut définir ses constantes sois-même cf. ; pour définir des constantes personnalisées, utilisez la fonction define(), dont la syntaxe est la suivante :
                             <strong>boolean define(string nom_cte,divers valeur_cte boolean casse)</strong>
-                            voir la page <a href="../00_page/03-page.php" target="blank">suivante</a>
+                            voir la page <a href="../00_page/03-page.php" target="blank"><u>suivante</u></a>
                         </p>
                     </div><!--Fin de la colonne-->
+                    <div class="col-sm-12 col-md-6">
+                        <table class="table table-striped">
+                              <thead>
+                                  <tr>
+                                      <th scope="col">Constantes</th>
+                                      <th scope="col">Résultats</th>
+                                  </tr>
+                              </thead> 
+                              <tbody>
+                                  <tr>
+                                      <th scope="row">PHP_VERSION</th>
+                                          <td>Version de php installé sur le serveur :
+                                                <?php
+                                                echo PHP_OS;
+                                                ?></td>
+                                  </tr>
+
+                                  <tr>
+                                      <th scope="row">PHP_OS</th>
+                                          <td>Nom du système d'exploitation du serveur :
+                                                <?php
+                                                echo PHP_OS;
+                                                ?></td>
+                                    </tr>
+
+                                    <tr>
+                                      <th scope="row">PHP_OS</th>
+                                          <td>Nom du système d'exploitation du serveur :
+                                                <?php
+                                                echo PHP_OS;
+                                                ?></td>
+                                    </tr>
+
+                                    <tr>
+                                      <th scope="row">PHP_OS</th>
+                                          <td>Nom du système d'exploitation du serveur :
+                                                <?php
+                                                echo PHP_OS;
+                                                ?></td>
+                                    </tr>
+
+                                    <tr>
+                                      <th scope="row">PHP_OS</th>
+                                          <td>Nom du système d'exploitation du serveur :
+                                                <?php
+                                                echo PHP_OS;
+                                                ?></td>
+                                    </tr>
+                              </tbody>                 
+                                </table>
+                        </div><!--Fin de la colonne-->
+
+                    </div>
                 </div>
             </main>
         </div>
